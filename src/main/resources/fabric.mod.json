@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "somethingstweak",
+  "version": "${version}",
+  "name": "SomethingsTweak",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/somethingstweak/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "vao211.somethingstweak.client.SomethingstweakDataGenerator"
+    ],
+    "client": [
+      "vao211.somethingstweak.client.SomethingstweakClient"
+    ],
+    "main": [
+      "vao211.somethingstweak.Somethingstweak"
+    ]
+  },
+  "mixins": [
+    "somethingstweak.mixins.json",
+    {
+      "config": "somethingstweak.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
